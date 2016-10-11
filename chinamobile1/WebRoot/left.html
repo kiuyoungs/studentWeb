@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>left.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	
+	#leftNav{
+		width:165px;
+	}
+	
+	li{
+		list-style:none;
+	}
+	
+	li.firstMenu{
+		text-align:center;
+		overflow: hidden;
+	}
+	
+	li.firstMenu a,li.firstMenu span{
+		/*转成行内块元素*/
+		display:inline-block;
+		width:100%;
+		text-decoration:none;
+		font-size:12px;
+		color:#000;
+	} 
+	
+	li.firstMenu span{
+		height:24px;
+		line-height:24px;
+		background-image:url(images/title_show.gif);
+	}
+	
+	li.firstMenu ul li{
+		height: 24px;
+		line-height: 24px;
+	}
+	
+	li.firstMenu ul li:hover{
+	/*	background-image:url(images/bg.jpg);*/
+	}
+	
+	/*初始化时将二级菜单隐藏*/
+	#leftNav ul li.firstMenu ul{
+		display: none;
+	}
+	
+	#leftNav ul li ul {
+		background-image:url(images/111_r5_c1.gif) ;
+		background-repeat: repeat-y;
+	}
+	
+	</style>
+	
+	<script type="text/javascript">
+		var spans ;
+		window.onload=function(){
+			//拿到所有的span
+			spans = document.getElementsByTagName("span");
+			for(var i=0 ; i<spans.length; i++){
+				spans[i].setAttribute('onclick','t(this)');
+			}
+		}
+
+		//将当前的span下的二级菜单显示
+		function t(o){
+			//nextSibling
+		
+			
+			for(var i=0 ; i<spans.length; i++){
+				var secondUl = spans[i].nextSibling.nextSibling;
+				if(secondUl != null && o ==spans[i]){
+					secondUl.style.display = (secondUl.style.display=='block')?'none':'block';
+				}else{
+					secondUl.style.display = 'none';
+				}
+			}
+			
+			
+		}
+	</script>
+  </head>
+  <body>
+    <div  id="leftNav">
+    	<ul>
+    		<li class="firstMenu">
+    			<span>操作员管理</span>
+    			<ul>
+    				<!-- 提交一个到OperatorListServlet的请求 -->
+    				<li><a href="OperatorQueryServlet?oprFlag=1" target="right">操作员列表</a></li>
+    				<li><a href="operator/new_operator.jsp" target="right">添加操作员</a></li>
+    			</ul>
+    		</li>
+    		
+    		 <li class="firstMenu">
+    			<span>资源管理</span>
+    			<ul>
+    				<li><a href="resource/resource.jsp" target="right">资源管理</a></li>
+    				<li><a href="operator/operatorList.html" target="right">添加操作员</a></li>
+    			</ul>
+    		</li>
+    		
+    		
+    		<li class="firstMenu">
+    			<span>业务管理</span>
+    			<ul>
+    				<!-- 要先跳转到ChargeDataServlet，查询出数据，再跳转到charge.jsp -->
+    				<li><a href="ChargeDataServlet" target="right">配置业务</a></li>
+    				<li><a href="operator/operatorList.html" target="right">添加操作员</a></li>
+    			</ul>
+    		</li>
+    		
+    		<li class="firstMenu">
+    			<span>操作员管理</span>
+    			<ul>
+    				<li><a href="operator/operatorList.html" target="right">操作员列表</a></li>
+    				<li><a href="operator/operatorList.html" target="right">添加操作员</a></li>
+    			</ul>
+    		</li>
+    		
+    		<!-- <li class="firstMenu"><a href="resource/resource.html" target="right">资源管理</a></li> -->
+    	</ul>
+    </div>
+  </body>
+</html>

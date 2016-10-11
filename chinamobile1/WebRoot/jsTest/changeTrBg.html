@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>changeTrBg.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <style>
+    	.c{
+    		color:red;
+    	}
+    </style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var trs = document.getElementsByTagName("tr");
+			for(var i= 0 ; i<trs.length ; i++){
+				trs[i].setAttribute('onmouseover','changeBg(this)');//this代表当前的tr对象
+				trs[i].setAttribute('onmouseout','changeBg(this)');//this代表当前的tr对象
+			}
+		}
+
+		function changeBg(o){
+			o.style.backgroundColor =  (o.style.backgroundColor == '#ccc')?'#fff':'#ccc';
+		}
+	
+	</script>
+  </head>
+  
+  <body>
+    <table border="1">
+    	<tr><td>dddddddddddd</td></tr>
+    	<tr><td>dddddddddddd</td></tr>
+    	<tr><td>dddddddddddd</td></tr>
+    	<tr><td>dddddddddddd</td></tr>
+    	<tr><td>dddddddddddd</td></tr>
+    </table>
+  </body>
+</html>
+
+

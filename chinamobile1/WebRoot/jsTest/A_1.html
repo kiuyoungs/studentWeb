@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>A_1.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" >
+		/*var a = "001$002$003$004";//","表示分隔符
+		var arr = a.split("$");//返回一个数组
+		alert(arr[0]);
+		*/
+
+		var s = "1+1";//s是一个字符串
+		
+		//alert(s);
+		//alert(eval(s));//eval的作用是把字符串强制转换为表达式
+
+		//document.write('hello');
+		function accMul(arg1,arg2)  
+		{  
+		    var m=0,s1=arg1.toString(),s2=arg2.toString();  
+		    try{m+=s1.split(".")[1].length}catch(e){}  
+		    try{m+=s2.split(".")[1].length}catch(e){}  
+		    return Number(s1.replace(".",""))*Number(s2.replace(".",""))/Math.pow(10,m)  
+		}
+		
+		//alert(accMul(3.01,5.99));
+		
+		alert(3.01*5.99);		
+    </script>
+
+  </head>
+  
+  <body>
+  <h1>hello</h1>
+  <h2>hello</h2>
+  <h3>hello</h3>
+  </body>
+</html>

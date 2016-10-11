@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 给编写好的Servlet类取一个名字 -->
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>com.chinamobile.servlet.HelloWorldServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	
+	<!-- 配置了一个映射，意思是通过ccc这个路径可以访问到名为hello的这个Servlet类，“/” 表示当前项目应用 -->
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/ccc</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>test</servlet-name>
+		<servlet-class>com.chinamobile.servlet.TestServlet</servlet-class>
+	</servlet>
+	
+	
+	<!-- 配置了一个映射，意思是通过aaa这个路径可以访问到名为hello的这个Servlet类，“/” 表示当前项目应用 -->
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>post</servlet-name>
+		<servlet-class>com.chinamobile.servlet.DoPostServlet</servlet-class>
+	</servlet>
+	
+  <servlet>
+    <servlet-name>DoGetServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.DoGetServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Test1Servlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.Test1Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MultiValueServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.MultiValueServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.DownServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CodeServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.CodeServlet</servlet-class>
+  </servlet>
+
+<servlet>
+	<servlet-name>Servlet1</servlet-name>
+	<servlet-class>passValue.Servlet1</servlet-class>
+</servlet>
+  <servlet>
+    <servlet-name>Servlet2</servlet-name>
+    <servlet-class>passValue.Servlet2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Servlet3</servlet-name>
+    <servlet-class>passValue.Servlet3</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>WriteCookieServlet</servlet-name>
+    <servlet-class>cookie.WriteCookieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ReadCookieServlet</servlet-name>
+    <servlet-class>cookie.ReadCookieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteCookieServlet</servlet-name>
+    <servlet-class>cookie.DeleteCookieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Servlet4</servlet-name>
+    <servlet-class>passValue.Servlet4</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OperatorAddServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.OperatorAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OperatorListServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.OperatorListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OperatorQueryServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.OperatorQueryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OperatorQuery1Servlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.OperatorQuery1Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OperatorDeleteServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.OperatorDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteManyOperatorServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.DeleteManyOperatorServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OperatorUpdateServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.OperatorUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OperatorUpdateOprServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.OperatorUpdateOprServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ElPassValueServlet</servlet-name>
+    <servlet-class>passValue.ElPassValueServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ResourceAddServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.ResourceAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ResourceAddFromTxtServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.ResourceAddFromTxtServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChargeDataServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.ChargeDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChargeChangeServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.ChargeChangeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChargeMgrServlet</servlet-name>
+    <servlet-class>com.chinamobile.servlet.ChargeMgrServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+	<servlet-mapping>
+		<servlet-name>post</servlet-name>
+		<url-pattern>/queryScore</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping> 
+    <servlet-name>DoGetServlet</servlet-name>
+    <url-pattern>/DoGetServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Test1Servlet</servlet-name>
+    <url-pattern>/Test1Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MultiValueServlet</servlet-name>
+    <url-pattern>/MultiValueServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownServlet</servlet-name>
+    <url-pattern>/DownServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CodeServlet</servlet-name>
+    <url-pattern>/CodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet1</servlet-name>
+    <url-pattern>/Servlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet2</servlet-name>
+    <url-pattern>/Servlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet3</servlet-name>
+    <url-pattern>/Servlet3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WriteCookieServlet</servlet-name>
+    <url-pattern>/WriteCookieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReadCookieServlet</servlet-name>
+    <url-pattern>/ReadCookieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCookieServlet</servlet-name>
+    <url-pattern>/DeleteCookieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet4</servlet-name>
+    <url-pattern>/Servlet4</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OperatorAddServlet</servlet-name>
+    <url-pattern>/OperatorAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OperatorListServlet</servlet-name>
+    <url-pattern>/OperatorListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OperatorQueryServlet</servlet-name>
+    <url-pattern>/OperatorQueryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OperatorQuery1Servlet</servlet-name>
+    <url-pattern>/OperatorQuery1Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OperatorDeleteServlet</servlet-name>
+    <url-pattern>/OperatorDeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteManyOperatorServlet</servlet-name>
+    <url-pattern>/DeleteManyOperatorServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OperatorUpdateServlet</servlet-name>
+    <url-pattern>/OperatorUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OperatorUpdateOprServlet</servlet-name>
+    <url-pattern>/OperatorUpdateOprServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ElPassValueServlet</servlet-name>
+    <url-pattern>/ElPassValueServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResourceAddServlet</servlet-name>
+    <url-pattern>/ResourceAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResourceAddFromTxtServlet</servlet-name>
+    <url-pattern>/ResourceAddFromTxtServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChargeDataServlet</servlet-name>
+    <url-pattern>/ChargeDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChargeChangeServlet</servlet-name>
+    <url-pattern>/ChargeChangeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChargeMgrServlet</servlet-name>
+    <url-pattern>/ChargeMgrServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
+
