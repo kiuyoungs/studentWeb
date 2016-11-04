@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>dengluservlet</servlet-name>
+    <servlet-class>com.student.dengluservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>dengluservlet1</servlet-name>
+    <servlet-class>com.student.dengluservlet1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentAddServlet</servlet-name>
+    <servlet-class>com.student.StudentAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentListServlet</servlet-name>
+    <servlet-class>com.student.StudentListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentAddServlet1</servlet-name>
+    <servlet-class>com.student.StudentAddServlet1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentListServlet1</servlet-name>
+    <servlet-class>com.student.StudentListServlet1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentQueryServlet</servlet-name>
+    <servlet-class>com.student.StudentQueryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentCountServlet</servlet-name>
+    <servlet-class>com.student.StudentCountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentDeleteServlet</servlet-name>
+    <servlet-class>com.student.StudentDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentUpdateServlet</servlet-name>
+    <servlet-class>com.student.StudentUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentUpdatestuServlet</servlet-name>
+    <servlet-class>com.student.StudentUpdatestuServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>dengluservlet</servlet-name>
+    <url-pattern>/dengluservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>dengluservlet1</servlet-name>
+    <url-pattern>/dengluservlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentAddServlet</servlet-name>
+    <url-pattern>/StudentAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentListServlet</servlet-name>
+    <url-pattern>/StudentListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentAddServlet1</servlet-name>
+    <url-pattern>/StudentAddServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentListServlet1</servlet-name>
+    <url-pattern>/StudentListServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentQueryServlet</servlet-name>
+    <url-pattern>/StudentQueryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentCountServlet</servlet-name>
+    <url-pattern>/StudentCountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentDeleteServlet</servlet-name>
+    <url-pattern>/StudentDeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentUpdateServlet</servlet-name>
+    <url-pattern>/StudentUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentUpdatestuServlet</servlet-name>
+    <url-pattern>/StudentUpdatestuServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
